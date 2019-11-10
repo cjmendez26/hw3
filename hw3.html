@@ -20,20 +20,55 @@
      <!--//container inside main container *white background *three rows //-->
      <div class="container bg-white">
 
-       <!--//heading *first row *bold text//-->
+       <!--//heading *first row *check boxes for charcter types//-->
         <div class="row">
-          <p><h2><strong>Generate a Password</strong></h2></p>
-        </div>  
+          <div class="col-small">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                <label class="form-check-label" for="defaultCheck4">
+                 Numbers
+                </label>
+            </div>
+          </div>
+          <div class="col-small">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label" for="defaultCheck1">
+                Capital Letters
+                </label>
+            </div>
+          </div> 
+          <div class="col-small"> 
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                <label class="form-check-label" for="defaultCheck1">
+                Lower Case Letters
+                </label>
+            </div>
+          </div>
+          <div class="col-small">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                <label class="form-check-label" for="defaultCheck1">
+                Special Characters
+                </label>
+            </div>
+          </div> 
+          <div class="col-small">
+              <input type="number" class="form-control" placeholder="Lenght of Pass.(8-128)" id="length"> 
+          </div>
+      </div>  
       <hr>
         <!--//heading *second row *centered *bold text *three collumns//-->
         <div class="row">
           <!--//empty collumn//-->
-          <div class="col-sm">
+          <div class="col-md">
           </div>
-          <div class="col-sm"><p id="new">  Your Secure Password Here </p>
+          <div class="col-md">
+            <input type="text" class="form-control" placeholder="Your Secure Password Here"id="new">
           </div>
           <!--//empty collumn//-->
-          <div class="col-sm">
+          <div class="col-md">
           </div>
         </div>
       <hr>
@@ -43,7 +78,7 @@
           <div class="col-sm">
           <div>
             <!--//first badge *gray backgbadge-secondaryround//---->
-            <button id="passwordGenerator" class="button badge-pill badge-secondary"><p>generate password</p>
+            <button id="generate" class="button badge-pill badge-secondary"><p>generate password</p>
             </button>
           </div>
           <!--//second collumn //-->
