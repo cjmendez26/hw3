@@ -4,23 +4,17 @@
     <meta charset="UTF-8">
     <title>Password Generator</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!---//button for new password//---> 
-    <script>
-        function myFunction() {
-          document.getElementById("new").innerHTML = "new";
-        }
-    </script>
+    <!---//button for new password and copy to clipboard//---> 
+  
+
   </head>
   <body>
-    <script>
-      <script>
-       window.prompt("how long do you want your password?");
-      </script>
-    </script>
+ 
+    
     <!--//main container  *gray background//-->
     <div class="container bg-secondary">
 
-     <!--//main header *centered//-->
+      <!--//main header *centered//-->
       <center><h1><strong>Password Generator</strong></h1></center>
 
      <!--//container inside main container *white background *three rows //-->
@@ -31,43 +25,39 @@
           <p><h2><strong>Generate a Password</strong></h2></p>
         </div>  
       <hr>
-      <!--//heading *second row *centered *bold text *three collumns//-->
+        <!--//heading *second row *centered *bold text *three collumns//-->
         <div class="row">
+          <!--//empty collumn//-->
           <div class="col-sm">
           </div>
           <div class="col-sm"><p id="new">  Your Secure Password Here </p>
           </div>
+          <!--//empty collumn//-->
           <div class="col-sm">
-        </div>
-        </div>
-      <hr>
-      <!--//third row *two collumns *two badges//--> 
-        <div class="row">
-        <!--//first collumn//-->
-        <div class="col-sm">
-          <div>
-                  <!--//first badge *gray background//---->
-            <span class="badge badge-pill badge-secondary">
-                      <!--//text inside badge//-->
-                      <p>
-                      <button type="button" onclick="myFunction()"> generate password</button>
-                      </p>
-                    </span>
           </div>
         </div>
-        <!--//second collumn //-->
+      <hr>
+        <!--//third row *two collumns *two badges//--> 
+        <div class="row">
+          <!--//first collumn//-->
           <div class="col-sm">
           <div>
-                  <!--//second badge *teal background//---->
-            <span class="badge badge-pill badge-info">
-                      <!--//text inside badge//-->
-            copy to clipboard
-            </span>
-          </div> 
+            <!--//first badge *gray backgbadge-secondaryround//---->
+            <button id="passwordGenerator" class="button badge-pill badge-secondary"><p>generate password</p>
+            </button>
+          </div>
+          <!--//second collumn //-->
+          <div class="col-sm badge">
+          <div>
+          <!--//second badge *teal background//---->
+            <button class="button badge-pill badge-info" onclick="myFunction()"><p id="clipboard">copy to clipboard</p>
+            </button>
+            </div> 
         </div>
       </div>
     </div>
-   
-    
+     
+  <script src="script.js"></script>
+  
   </body>
 </html>
