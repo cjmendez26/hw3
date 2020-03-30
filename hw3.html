@@ -8,80 +8,67 @@
   
 
   </head>
-  <body>
- 
-    
+  <body class="bg-dark">
+    <br><br>
     <!--//main container  *gray background//-->
-    <div class="container bg-secondary">
-
+    <div class=" text-center container bg-secondary">
       <!--//main header *centered//-->
-      <center><h1><strong>Password Generator</strong></h1></center>
-
-     <!--//container inside main container *white background *three rows //-->
-     <div class="container bg-white">
-
-       <!--//heading *first row *check boxes for charcter types//-->
-        <div class="row">
-          <div class="col-small">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
-                <label class="form-check-label" for="defaultCheck4">
-                 Numbers
-                </label>
-            </div>
+      <h1><strong>Password Generator</strong></h1>
+      <!--//container inside main container *white background *three rows //-->
+      <!--//heading *first row *check boxes for character types//-->
+      <div class="row">
+        <div class="col-small">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="checkNumbers">
+            <label class="form-check-label" for="defaultCheck4">Numbers</label>
           </div>
-          <div class="col-small">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                <label class="form-check-label" for="defaultCheck1">
-                Capital Letters
-                </label>
-            </div>
-          </div> 
-          <div class="col-small"> 
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-                <label class="form-check-label" for="defaultCheck1">
-                Lower Case Letters
-                </label>
-            </div>
+        </div>
+        <div class="col-small">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="checkUpperCase">
+            <label class="form-check-label" for="defaultCheck1">Capital Letters</label>
           </div>
-          <div class="col-small">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
-                <label class="form-check-label" for="defaultCheck1">
-                Special Characters
-                </label>
-            </div>
-          </div> 
-          <div class="col-small">
-              <input type="number" class="form-control" placeholder="Lenght of Pass.(8-128)" id="length"> 
+        </div> 
+        <div class="col-small"> 
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="checkLowerCase">
+            <label class="form-check-label" for="defaultCheck1">Lower Case Letters</label>
           </div>
+        </div>
+        <div class="col-small">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="checkSpecial">
+            <label class="form-check-label" for="defaultCheck1">Special Characters</label>
+          </div>
+        </div>
+        <div class="col-small">
+            <input type="number" class="form-control" placeholder="Length of Pass.(8-128)" id="length"> 
+        </div>
       </div>  
       <hr>
-        <!--//heading *second row *centered *bold text *three collumns//-->
+        <!--//heading *second row *centered *bold text *three columns//-->
         <div class="row">
-          <!--//empty collumn//-->
+          <!--//empty column//-->
           <div class="col-md">
           </div>
           <div class="col-md">
-            <input type="text" class="form-control" placeholder="Your Secure Password Here"id="new">
+            <input type="text" class="form-control" placeholder="Your Secure Password Here" id="new">
           </div>
-          <!--//empty collumn//-->
+          <!--//empty column//-->
           <div class="col-md">
           </div>
         </div>
       <hr>
-        <!--//third row *two collumns *two badges//--> 
+        <!--//third row *two columns *two badges//--> 
         <div class="row">
-          <!--//first collumn//-->
+          <!--//first column//-->
           <div class="col-sm">
           <div>
-            <!--//first badge *gray backgbadge-secondaryround//---->
-            <button id="generate" class="button badge-pill badge-secondary"><p>generate password</p>
+            <!--//first badge *gray background badge-secondary round//---->
+            <button class="button badge-pill badge-secondary" id="generate" ><p>generate password</p>
             </button>
           </div>
-          <!--//second collumn //-->
+          <!--//second column //-->
           <div class="col-sm badge">
           <div>
           <!--//second badge *teal background//---->

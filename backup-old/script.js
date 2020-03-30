@@ -26,15 +26,15 @@ function generate(){
   //trying to link the checked number box to numbers
     all+=numbers.charAt(Math.floor(Math.random()*numbers.length));
 //generates random for only lowercase
-  for (i=0;i<lenght;i++)
+  for (i=0;i<length;i++)
 //trying to link the checked box to lowercase
     all+=lowerCase.charAt(Math.floor(Math.random()*lowerCase.length));
 //generates random for uppercase
-  for (i=0;i<lenght;i++)
+  for (i=0;i<length;i++)
   //trying to link checked box to uppercase//
     all+=upperCase.charAt(Math.floor(Math.random()*upperCase.length));
 //generates random for special char
-  for (i=0;i<lenght;i++)
+  for (i=0;i<length;i++)
   //trying to link checked box to special char//
     all+=specialChar.charAt(Math.floor(Math.random()*specialChar.length));
 //generarates random for all
