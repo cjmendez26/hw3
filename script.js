@@ -2,7 +2,8 @@ document.getElementById("generate").addEventListener("click", generatePassword);
 
 function generator(length, numChecked, upperChecked, lowerChecked, specialChecked){
     var num = '0123456789';
-    var abcs = 'abcdefghijklmnopqrstuvwxyz';
+    var upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var lowerCase = 'abcdefghijklmnopqrstuvwxyz';
     var specialChar = '!@#$%^&*_-.,+=?/~';
     var password = "";
     var selected = "";
@@ -12,10 +13,10 @@ function generator(length, numChecked, upperChecked, lowerChecked, specialChecke
         selected += num;
     }
     if (upperChecked.checked===true) {
-        selected += abcs.upperCase;
+        selected += upperCase;
     }
     if (lowerChecked.checked===true) {
-        selected += abcs.lowerCase;
+        selected += lowerCase;
     }
     if (specialChecked.checked===true) {
         selected += specialChar;
