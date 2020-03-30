@@ -1,21 +1,44 @@
 document.getElementById("generate").addEventListener("click", generatePassword);
 
-function generator(){
-    var num = '0, 1, 2, 3, 4, 5, 6, 7, 8, 9';
-    var abcs = 'a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z';
-    var specialChar = '!, @, #, $, %, ^, &, *, _, -, +, =, ?, /, ~';
-
+function generator(length, numChecked, upperChecked, lowerChecked, specialChecked){
+    var num = '0123456789';
+    var abcs = 'abcdefghijklmnopqrstuvwxyz';
+    var specialChar = '!@#$%^&*_-.,+=?/~';
+    var password = "";
+    var selected = "";
 // generate a random character from (num, abcs, or specialChar) 
 // to add to the generated password
+    if (numChecked.checked===true) {
+        selected += num;
+    }
+    if (upperChecked.checked===true) {
+        selected += abcs.upperCase;
+    }
+    if (lowerChecked.checked===true) {
+        selected += abcs.lowerCase;
+    }
+    if (specialChecked.checked===true) {
+        selected += specialChar;
+    }
     for(var i = 0; i< length; i++) { 
+        password+=selected.charAt(Math.floor(Math.random()*selected.length)); 
         
     }
+    
+    console.log(password);
+    document.getElementById("new").value = password;
+    
 }
 
 function generatePassword() {
-
+    var lowerChecked = document.getElementById("checkLowerCase");
+    var specialChecked = document.getElementById("checkSpecial");
+    var upperChecked = document.getElementById("checkUpperCase");
+    var numChecked = document.getElementById("checkNumbers");
     var length = document.getElementById("length").value;
     console.log("generate password");
     console.log(length);
-    generator();
+    console.log(numChecked.checked);
+    
+    generator(length, numChecked, upperChecked, lowerChecked, specialChecked);
 }
